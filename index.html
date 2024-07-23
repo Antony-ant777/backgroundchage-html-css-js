@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            justify-items: center;   
+        }
+        #tot{
+            border: 2px solid black;
+            height: 200px;
+            width: 400px;
+            margin-top: 200px;   
+            background-color: aqua;
+        }
+        button{
+            margin: 150px ;
+        }
+        h2{
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+
+
+    <div id="tot">
+        <h2 id="input">background-color=aqua</h2>
+        <button  onclick="cl()">Click here</button>
+    </div>
+   
+    <script>
+        // function long(a){
+        //     let str=a.split(" ");
+        //     let b="";
+        //     let len=0;
+        //     for( let i=0;i<str.length;i++)
+        //     {
+        //        if(str[i].length>len)
+        //        {
+        //         len=str[i].length;
+        //         b=str[i];
+        //        }""
+        //     }
+        //     console.log(b);
+        // }
+        // let a1=prompt(" enter the para");
+        // long(a1)
+
+
+        let arr=["red","yelow","brown","pink","blue","purple"];
+        let i=0;
+        function cl(){
+           document.getElementById('tot').style.backgroundColor=arr[i];
+           if(arr[i]=="red")
+           {
+            document.getElementById("input").innerText="Background color=red";
+           }
+           else if(arr[i]=="yellow")
+           {
+            document.getElementById("input").innerText="Background color=yellow";
+           }
+           else if(arr[i]=="brown")
+           {
+            document.getElementById("input").innerText="Background color=brown";
+           }
+           else if(arr[i]=="pink")
+           {
+            document.getElementById("input").innerText="Background color=pink";
+           }
+           else if(arr[i]=="blue")
+           {
+            document.getElementById("input").innerText="Background color=blue";
+           }
+           else if(arr[i]=="purple")
+           {
+            document.getElementById("input").innerText="Background color=purple";
+           }
+            i=(i+1)%arr.length;
+            
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
